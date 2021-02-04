@@ -15,14 +15,27 @@
 - [Link-Sammlung](#link-sammlung)
 
 ## Einleitung 
+(folgt)
 
 ## Kaufentscheidung
+(folgt)
 
 ## Probleme
 ### Die Cloud muss Weg
-### Dunkle Teppiche
-### Random Resets
+Wie Dennis Giese und Daniel Wegemer auf der [34C3 zeigten](https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking), gibt es gute Gründe seinen Staubsauger mit einer OpenSource
+Firmware auszustatten. Gestartet bin damals mit dem [Valetudo-Projekt von Hypfer](https://github.com/Hypfer/Valetudo/). Später bin ich aufgrund einiger Fehler und der langsamen Entwicklung auf den [Fork von rand256] (https://github.com/rand256/valetudo) umgestiegen. Mittlerweile unterstützen beide Projekte mehr als nur einen Sauger. Aus Bequemlichkeit bin ich noch immer bei dem Fork, obwohl Hypfer mittlerweile aktiv an dem Projekt weitergearbeitet hat.
 
+### Dunkle Teppiche
+Wie ich feststellen musste, kommt der Roborock nicht so gut mit dunklen Teppichen klar (er saugt sie nicht), da die Klippen-Sensoren, den Teppich fälschlicher Weise als Abgrund erkennen. 
+Der Klippen-Sensor sendet ein Infrarot-Signal aus und schaut, ob dieses reflektiert wird. Empfängt er keine Reflektion, geht er von einer Stufe / einem Abgrund aus.
+Da dunkle Teppiche das Licht und somit auch das Infrarot-Signal recht gut absorbieren, kommt es zur Fehleinschätzung. 
+Solltest du keine Stufen in deiner Wohnung haben, wo der Roboter herunterfallen kann, ist die Lösung recht simpel: Sensoren Abkleben.
+Falls du zugriff auf einen 3D Drucker hast, kannst du dir auch [Abdeckungen drucken](https://www.thingiverse.com/thing:3103343). 
+
+### Random Resets
+Sollte es vorkommen, dass sich dein Staubsauger nach einiger Zeit (bei mir waren es meist so 2-3 Monate) zurücksetzt, kann dies mit dem Watchdog zusammenhängen.
+Sowohl in der Firmware von Hypfer als auch in der von rand256 sollte das Problem mittlerweile behoben sein.
+Solltest du dennoch Probleme haben, kann dir [dieser Github-Kommentar](https://github.com/Hypfer/Valetudo/issues/206#issuecomment-498132355) vermutlich weiterhelfen.
 
 ## Home Assistant & Automatisierungen 
 ### Integration
@@ -35,7 +48,9 @@ vacuum:
     host: 192.168.13.4
     token: 748293425487239402342346
 ```
-Nun solltest eine Entität namens `vacuum.sucker` auftauchen. 
+Nun sollte eine Entität namens `vacuum.sucker` auftauchen. 
+Damit das ganze in Lovelace auch schön aussieht, noch flott die [Custom Card](https://github.com/benct/lovelace-xiaomi-vacuum-card) geladen und eingerichtet.
+Es gibt zudem eine Custom Card, um die verschiedene Zonen anfahren zu können. Diese findest du [hier](https://github.com/PiotrMachowski/lovelace-xiaomi-vacuum-map-card).
 
 ### Automatisierungen
 Da wir unseren unsere eigenen Automatisierungen nutzen wollen, schalten wir als erstes alle Zeitpläne im Webfrontend des Saugers ab.
