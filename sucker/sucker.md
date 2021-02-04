@@ -1,9 +1,10 @@
 # Ein Staubsauger und seine Probleme (und wie man sie löst)
+In diesem Vortag möchte ich über die Erfahrungen und Probleme die ich mit meinem Roborock S50 hatte sprechen. 
+
 - Vortrag auf YouTube: (folgt)
 - Download der Präsentation: (folgt)
 
 ## Inhaltsverzeichnis
-- [Einleitung](#einleitung)
 - [Kaufentscheidung](#kaufentscheidung)
 - [Probleme](#probleme)
   - [Die Cloud muss Weg](#die-cloud-muss-weg)
@@ -14,16 +15,19 @@
   - [Automatisierungen](#automatisierungen)
 - [Link-Sammlung](#link-sammlung)
 
-## Einleitung 
-(folgt)
-
 ## Kaufentscheidung
-(folgt)
+Gut, günstig und ohne Cloud. Das waren die Anforderungen an meinen Saugroboter. Gerade der letzte Punkt schien zur damaligen Zeit (August 2019) unmöglich. 
+Zwar gab es 2-3 Sauger die auch ohne Cloud auskamen, aber diese hatten dann meist nur eine Fernbedienung und schnitten in dem meisten Tests nicht sonderlich gut ab.
+Via Zufall bin ich bei der Recherche bei YouTube auf [dieses Video](https://youtu.be/uhyM-bhzFsI) des CCC gestoßen. Zwei Hacker zeigen dort, wie sie einen Roborock geknackt 
+und ihn Cloud-los bekommen haben. Am Ende des Videos wird auf das [DustCloud-Projekt](https://github.com/dgiese/dustcloud) hingewiesen, das aus ihren Arbeiten heraus entschaden ist.
+An diesem Punkt war für mich die Entscheidung gefallen und ich kaufte mir ein Roborock S50 für ~480€ auf Amazon.
 
 ## Probleme
 ### Die Cloud muss Weg
 Wie Dennis Giese und Daniel Wegemer auf der [34C3 zeigten](https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking), gibt es gute Gründe seinen Staubsauger mit einer OpenSource
-Firmware auszustatten. Gestartet bin damals mit dem [Valetudo-Projekt von Hypfer](https://github.com/Hypfer/Valetudo/). Später bin ich aufgrund einiger Fehler und der langsamen Entwicklung auf den [Fork von rand256] (https://github.com/rand256/valetudo) umgestiegen. Mittlerweile unterstützen beide Projekte mehr als nur einen Sauger. Aus Bequemlichkeit bin ich noch immer bei dem Fork, obwohl Hypfer mittlerweile aktiv an dem Projekt weitergearbeitet hat.
+Firmware auszustatten. Das im Video angesprochene [DustCloud-Projekt](https://github.com/dgiese/dustcloud) war leider nicht ganz so, wie ich mir das gedacht hatte. Einfach nicht sinnvoll nutzbar. 
+Allerdings fand ich ein anderes, offenbar komplett unabhängig von DustCloud entwickeltes, Projekt namens [Valetudo](https://github.com/Hypfer/Valetudo/). Ich flashte es und war begeistert davon, wie einfach es war. 
+Später bin ich aufgrund einiger Fehler und der langsamen Entwicklung auf den [Fork von rand256] (https://github.com/rand256/valetudo) umgestiegen. Mittlerweile unterstützen beide Projekte mehr als nur einen Sauger. Aus Bequemlichkeit bin ich noch immer bei dem Fork, obwohl Hypfer mittlerweile aktiv an dem Projekt weitergearbeitet hat.
 
 ### Dunkle Teppiche
 Wie ich feststellen musste, kommt der Roborock nicht so gut mit dunklen Teppichen klar (er saugt sie nicht), da die Klippen-Sensoren, den Teppich fälschlicher Weise als Abgrund erkennen. 
