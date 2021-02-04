@@ -142,10 +142,11 @@ Ohne Delay würde er also nur aufhören zu saugen, aber nicht zurück in die Doc
   - https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking
   - YouTube (englisches Original): https://youtu.be/uhyM-bhzFsI
   - YouTube (deutsche Übersetzung): https://youtu.be/wKVZqkXUypo
+  - DustCloud: https://github.com/dgiese/dustcloud
 - Roborock Vacuum Cleaner 2 (S50) bei Amazon
   - https://www.amazon.de/gp/product/B07GQN4VM8
 - Open-Source Firmware
-  - Original von Hypfer: https://github.com/Hypfer/Valetudo/
+  - Firmware von Hypfer: https://github.com/Hypfer/Valetudo/
   - Fork von rand256: https://github.com/rand256/valetudo
 - Klippensensorenabdeckung zum selber drucken
   - https://www.thingiverse.com/thing:3103343
