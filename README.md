@@ -1,5 +1,5 @@
 # Home Assistant Munich Meetup
-Dies ist eine Sammlung all meiner Präsentation, die ich zu dem [Home Assistant Munich Meetup](https://www.meetup.com/de-DE/Home-Assistant-Munich/) beitragen durfte.
+Dies ist eine Sammlung all meiner Präsentation, die ich bisher zum [Home Assistant Munich Meetup](https://www.meetup.com/de-DE/Home-Assistant-Munich/) beitragen durfte.
 
 ## Präsentationen
 Bisher vorgetragene Präsentationen:
