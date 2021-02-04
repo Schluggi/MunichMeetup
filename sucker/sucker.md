@@ -3,11 +3,16 @@
 - Download der Präsentation: (folgt)
 
 ## Inhaltsverzeichnis
-- Einleitung
-- Kaufentscheidung
-- Probleme
-- Home Assistant & Automatisierungen
-- Link-Sammlung
+- [Einleitung](#einleitung)
+- [Kaufentscheidung](#kaufentscheidung)
+- [Probleme](#probleme)
+  - [Die Cloud muss Weg](#die-cloud-muss-weg)
+  - [Dunkle Teppiche](#dunkle-teppiche)
+  - [Random Resets](#random-resets)
+- [Home Assistant & Automatisierungen](#home-assistant--automatisierungen)
+  - [Integration](#integration)
+  - [Automatisierungen](#automatisierungen)
+- [Link-Sammlung](#link-sammlung)
 
 ## Einleitung 
 
