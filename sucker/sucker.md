@@ -11,7 +11,8 @@ In diesem Vortag möchte ich über die Erfahrungen und Probleme die ich mit mein
   - [Dunkle Teppiche](#dunkle-teppiche)
   - [Random Resets](#random-resets)
 - [Home Assistant & Automatisierungen](#home-assistant--automatisierungen)
-  - [Integration](#integration)
+  - [Integration via MQTT (empfohlen)]()
+  - [Integration via Miio]()
   - [Automatisierungen](#automatisierungen)
 - [Link-Sammlung](#link-sammlung)
 
@@ -42,7 +43,10 @@ Sowohl in der Firmware von Hypfer als auch in der von rand256 sollte das Problem
 Solltest du dennoch Probleme haben, kann dir [dieser Github-Kommentar](https://github.com/Hypfer/Valetudo/issues/206#issuecomment-498132355) vermutlich weiterhelfen.
 
 ## Home Assistant & Automatisierungen 
-### Integration
+### Integration via MQTT (empfohlen)
+(folgt)
+
+### Integration via Miio
 Das Integrieren des Roborocks in Home Assistant ist sehr leicht. Hierzu wird der Token des Saugers benötigt, welchen wir im Webfrontend unter
 `Settings -> Info -> Token` finden. Die Konfiguration sieht dann wie folgt aus:
 ```yaml
