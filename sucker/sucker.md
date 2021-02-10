@@ -2,7 +2,7 @@
 In diesem Vortag möchte ich über die Erfahrungen und Probleme die ich mit meinem Roborock S50 hatte sprechen. 
 
 - Vortrag auf YouTube: (folgt)
-- Download der Präsentation: (folgt)
+- [Download der Präsentation](https://github.com/Schluggi/MunichMeetup/blob/main/sucker/2021-03.Ein%20Staubsauger%20und%20seine%20Probleme%20(und%20wie%20man%20sie%20l%C3%B6st).pdf)
 
 ## Inhaltsverzeichnis
 - [Kaufentscheidung](#kaufentscheidung)
