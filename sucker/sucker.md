@@ -139,16 +139,13 @@ Ohne Delay würde er also nur aufhören zu saugen, aber nicht zurück in die Doc
 
 ## Link-Sammlung
 - Vortrag von Dennis Giese und Daniel Wegemer auf der 34C3
-  - https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking
+  - Beitrag und Video des CCC: https://media.ccc.de/v/34c3-9147-unleash_your_smart-home_devices_vacuum_cleaning_robot_hacking
   - YouTube (englisches Original): https://youtu.be/uhyM-bhzFsI
   - YouTube (deutsche Übersetzung): https://youtu.be/wKVZqkXUypo
   - DustCloud: https://github.com/dgiese/dustcloud
-- Roborock Vacuum Cleaner 2 (S50) bei Amazon
-  - https://www.amazon.de/gp/product/B07GQN4VM8
-- Klippensensorenabdeckung zum selber drucken
-  - https://www.thingiverse.com/thing:3103343
-- Lösung für die random Resets
-  - https://github.com/Hypfer/Valetudo/issues/206#issuecomment-498132355
+- Roborock Vacuum Cleaner 2 (S50) bei Amazon: https://www.amazon.de/gp/product/B07GQN4VM8
+- Klippensensorenabdeckung zum selber drucken: https://www.thingiverse.com/thing:3103343
+- Lösung für die random Resets: https://github.com/Hypfer/Valetudo/issues/206#issuecomment-498132355
 - Open-Source Firmware
   - Von Hypfer
     - Firmware: https://github.com/Hypfer/Valetudo/
