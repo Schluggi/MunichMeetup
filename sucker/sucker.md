@@ -145,14 +145,21 @@ Ohne Delay würde er also nur aufhören zu saugen, aber nicht zurück in die Doc
   - DustCloud: https://github.com/dgiese/dustcloud
 - Roborock Vacuum Cleaner 2 (S50) bei Amazon
   - https://www.amazon.de/gp/product/B07GQN4VM8
-- Open-Source Firmware
-  - Firmware von Hypfer: https://github.com/Hypfer/Valetudo/
-  - Fork von rand256: https://github.com/rand256/valetudo
 - Klippensensorenabdeckung zum selber drucken
   - https://www.thingiverse.com/thing:3103343
 - Lösung für die random Resets
   - https://github.com/Hypfer/Valetudo/issues/206#issuecomment-498132355
+- Open-Source Firmware
+  - Von Hypfer
+    - Firmware: https://github.com/Hypfer/Valetudo/
+    - Map-Converter: https://github.com/Hypfer/ICantBelieveItsNotValetudo
+    - MQTT-Doku: https://valetudo.cloud/pages/integrations/mqtt.html
+  - Fork von rand256
+    - Firmware: https://github.com/rand256/valetudo
+    - Map-Converter: https://github.com/rand256/valetudo-mapper
+    - MQTT-Doku: https://github.com/rand256/valetudo/wiki/MQTT-API
 - Home Assistant
-  - Integration: https://www.home-assistant.io/integrations/xiaomi_miio/
-  - Custom Lovelace Card für den Sauger: https://github.com/benct/lovelace-xiaomi-vacuum-card
-  - Custom Lovelace Card für die Zonen: https://github.com/PiotrMachowski/lovelace-xiaomi-vacuum-map-card
+  - Integration via Miio: https://www.home-assistant.io/integrations/xiaomi_miio/
+  - Custom Lovelace Card (Vacuum Card): https://github.com/denysdovhan/vacuum-card
+  - Custom Lovelace Card (XIAOMI Vacuum Card): https://github.com/benct/lovelace-xiaomi-vacuum-card
+  - Custom Lovelace Card (XIAOMI Vacuum Map Card): https://github.com/PiotrMachowski/lovelace-xiaomi-vacuum-map-card
