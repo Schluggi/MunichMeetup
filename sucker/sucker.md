@@ -164,3 +164,4 @@ Ohne Delay würde er also nur aufhören zu saugen, aber nicht zurück in die Doc
   - Custom Lovelace Card (Vacuum Card): https://github.com/denysdovhan/vacuum-card
   - Custom Lovelace Card (XIAOMI Vacuum Card): https://github.com/benct/lovelace-xiaomi-vacuum-card
   - Custom Lovelace Card (XIAOMI Vacuum Map Card): https://github.com/PiotrMachowski/lovelace-xiaomi-vacuum-map-card
+ - MQTT-Explorer: https://mqtt-explorer.com/
