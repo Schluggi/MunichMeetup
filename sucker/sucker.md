@@ -44,7 +44,7 @@ Solltest du dennoch Probleme haben, kann dir [dieser Github-Kommentar](https://g
 
 ## Home Assistant & Automatisierungen 
 ### Integration via MQTT (empfohlen)
-(folgt)
+(folgt, siehe Aufzeichnung)
 
 ### Integration via Miio
 Das Integrieren des Roborocks in Home Assistant ist sehr leicht. Hierzu wird der Token des Saugers benötigt, welchen wir im Webfrontend unter
@@ -65,25 +65,27 @@ Da wir unseren unsere eigenen Automatisierungen nutzen wollen, schalten wir als 
 Anschließend erstellen wir einen `input_boolean` in Home Assistant.
 ```yaml
 input_boolean:
-  sucker_scheduling:
+  suck_my_flat:
     name: Suck my Flat
     initial: off
     icon: mdi:robot-vacuum
 ```
-Nun überlegen wir uns einen Zeitplan, wann gesaugt werden soll und bauen uns eine Automatisierung, die den gerade angelegten `input_boolean` entsprechend einschaltet.
+Nun überlegen wir uns einen Zeitplan, wie regelmäßig ca. gesaugt werden soll und bauen uns eine Automatisierung, die den gerade angelegten `input_boolean` entsprechend einschaltet.
 ```yaml
-  - alias: Sucker (routine)
-    trigger:
-      - platform: time
-        at: '9:00:00'
-    condition:
-      - condition: time
-        weekday:
-          - tue
-          - fri
-    action:
-      - service: input_boolean.turn_on
-        entity_id: input_boolean.sucker_scheduling
+alias: Sucker (routine)
+trigger:
+  - platform: time
+    at: '9:00:00'
+condition:
+  - condition: time
+    weekday:
+      - tue
+      - fri
+action:
+  - service: input_boolean.turn_on
+    target:
+      entity_id: input_boolean.suck_my_flat
+mode: single
 ```
 In diesem Beispiel soll also jeden Dienstag und Freitag um 9Uhr gesaugt werden.
 <br><br>
@@ -91,28 +93,30 @@ Damit er auch wirklich saugt, legen wir nun eine weitere Automatisierung an, die
 Außerdem soll nur gesaugt werden, wenn wir mindestens bereits eine Stunde nicht mehr zuhause waren.
 Dies soll verhindern, dass der Sauger nicht direkt anspringt, wenn wir z.B. den Müll raus bringen oder nur kurz nach der Post sehen.
 ```yaml
- - alias: Sucker (suck my flat)
-    trigger:
-      - platform: time_pattern
-        hours: '*'
-        minutes: 0
-        seconds: 0
-    condition:
-      - condition: state
-        entity_id: binary_sensor.presence_lukas
-        state: 'off'
-        for: '1:00:00'
-      - condition: time
-        after: '10:30:00'
-        before: '22:00:00'
-      - condition: state
-        entity_id: input_boolean.sucker_scheduling
-        state: 'on'
-    action:
-      - service: input_boolean.turn_off
-        entity_id: input_boolean.sucker_scheduling
-      - service: vacuum.start
-        entity_id: vacuum.sucker
+alias: Sucker (suck my flat)
+trigger:
+  - platform: time_pattern
+    hours: '*'
+    minutes: '0'
+    seconds: '0'
+condition:
+  - condition: state
+    entity_id: person.lukas
+    state: not_home
+    for: '01:00:00'
+  - condition: time
+    after: '10:30:00'
+    before: '20:00:00'
+  - condition: state
+    entity_id: input_boolean.suck_my_flat
+    state: 'on'
+action:
+  - service: input_boolean.turn_off
+    target:
+      entity_id: input_boolean.suck_my_flat
+  - service: vacuum.start
+    entity_id: vacuum.sucker
+mode: single
 ```
 Eine time condition soll verhindern, dass Nachts gesaugt wird.
 Mit dem Starten des Saugvorgangs schalten wir zudem unser `input_boolean` wieder aus.
@@ -120,23 +124,25 @@ Mit dem Starten des Saugvorgangs schalten wir zudem unser `input_boolean` wieder
 Aktuell kann es noch passieren, dass wir nach einem harten Tag nach Hause kommen und der Sauger (je nach Zeitplan) gerade saugt (super nervig -.-).
 Daher habe basteln wir uns noch flott eine eine dritte Automatisierung, welche das Saugen abbricht und später wiederholt, sobald wir nach Hause kommen:
 ```yaml
-  - alias: Sucker (abort) 
-    trigger:
-      - platform: state
-        entity_id: binary_sensor.presence_lukas
-        to: 'on'
-    condition:
-      - condition: state
-        entity_id: vacuum.sucker
-        state: 'cleaning'
-    action:
-      - service: input_boolean.turn_on
-        entity_id: input_boolean.sucker_scheduling
-      - service: vacuum.stop
-        entity_id: vacuum.sucker
-      - delay: '00:00:03'
-      - service: vacuum.return_to_base
-        entity_id: vacuum.sucker
+alias: Sucker (abort)
+trigger:
+  - platform: state
+    entity_id: person.lukas
+    to: home
+condition:
+  - condition: state
+    entity_id: vacuum.sucker
+    state: cleaning
+action:
+  - service: input_boolean.turn_on
+    target:
+      entity_id: input_boolean.suck_my_flat
+  - service: vacuum.stop
+    entity_id: vacuum.sucker
+  - delay: '00:00:03'
+  - service: vacuum.return_to_base
+    entity_id: vacuum.sucker
+mode: single
 ```
 Das Delay ist notwendig, da der Sauger immer nur ein Input verarbeiten kann.
 Ohne Delay würde er also nur aufhören zu saugen, aber nicht zurück in die Dock fahren.
