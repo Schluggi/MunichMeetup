@@ -3,6 +3,6 @@ Dies ist eine Sammlung all meiner Präsentation, die ich bisher zum [Home Assist
 
 ## Präsentationen
 Bisher vorgetragene Präsentationen:
-- (2021-??-??) [Ein Staubsauger und seine Probleme (und wie man sie löst)](https://github.com/Schluggi/MunichMeetup/blob/main/sucker/sucker.md)
+- (2021-07-07) [Ein Staubsauger und seine Probleme (und wie man sie löst)](https://github.com/Schluggi/MunichMeetup/blob/main/sucker/sucker.md)
 <br>
 Vielen dank, dass ich ein Teil davon sein durfte.
