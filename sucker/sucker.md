@@ -1,7 +1,7 @@
 # Ein Staubsauger und seine Probleme (und wie man sie löst)
 In diesem Vortag möchte ich über die Erfahrungen und Probleme die ich mit meinem Roborock S50 hatte sprechen. 
 
-- Vortrag auf YouTube: (folgt)
+- [Vortrag auf YouTube](https://www.youtube.com/watch?v=Gz9_gbex1FI)
 - [Download der Präsentation](https://github.com/Schluggi/MunichMeetup/blob/main/sucker/2021-03.Ein%20Staubsauger%20und%20seine%20Probleme%20(und%20wie%20man%20sie%20l%C3%B6st).pdf)
 
 ## Inhaltsverzeichnis
@@ -15,6 +15,8 @@ In diesem Vortag möchte ich über die Erfahrungen und Probleme die ich mit mein
   - [Integration via Miio]()
   - [Automatisierungen](#automatisierungen)
 - [Link-Sammlung](#link-sammlung)
+
+> **Update Nov. 2021:** Mitlerweile hat sich [Valetudo von Hypfer](https://github.com/Hypfer/Valetudo/) so schnell weiterentwickelt, dass meine Empfehlung klar bei diesem liegt. Außerdem benötigt man für die Map-Darstellung nun keinen mapper, sondern kann dies direkt über die entsprechende [Card](https://github.com/TheLastProject/lovelace-valetudo-map-card) tun.
 
 ## Kaufentscheidung
 Gut, günstig und ohne Cloud. Das waren die Anforderungen an meinen Saugroboter. Gerade der letzte Punkt schien zur damaligen Zeit (August 2019) unmöglich. 
@@ -159,7 +161,7 @@ Ohne Delay würde er also nur aufhören zu saugen, aber nicht zurück in die Doc
 - Open-Source Firmware
   - Von Hypfer
     - Firmware: https://github.com/Hypfer/Valetudo/
-    - Map-Converter: https://github.com/Hypfer/ICantBelieveItsNotValetudo
+    - Map-Converter: https://github.com/Hypfer/ICantBelieveItsNotValetudo (wird in der aktuellen Version nicht mehr benötigt)
     - MQTT-Doku: https://valetudo.cloud/pages/integrations/mqtt.html
   - Fork von rand256
     - Firmware: https://github.com/rand256/valetudo
@@ -170,4 +172,5 @@ Ohne Delay würde er also nur aufhören zu saugen, aber nicht zurück in die Doc
   - Custom Lovelace Card (Vacuum Card): https://github.com/denysdovhan/vacuum-card
   - Custom Lovelace Card (XIAOMI Vacuum Card): https://github.com/benct/lovelace-xiaomi-vacuum-card
   - Custom Lovelace Card (XIAOMI Vacuum Map Card): https://github.com/PiotrMachowski/lovelace-xiaomi-vacuum-map-card
+  - Custom Lovelace Card (Valetudo Map Card): https://github.com/TheLastProject/lovelace-valetudo-map-card
  - MQTT-Explorer: https://mqtt-explorer.com/
